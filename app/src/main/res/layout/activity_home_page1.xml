@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homePage1">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="394dp"
+        android:layout_height="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoBG" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="304dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="308dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Enter your age(dd/mm/yyyy)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <ImageView
+        android:id="@+id/ivCld"
+        android:layout_width="34dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/etAge"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="@+id/etAge"
+        app:layout_constraintTop_toTopOf="@+id/etAge"
+        app:srcCompat="@drawable/cld" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <Spinner
+        android:id="@+id/spGender"
+        android:layout_width="305dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="298dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter address or auto detect"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spGender" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/etAddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etAddress"
+        app:layout_constraintTop_toTopOf="@+id/etAddress"
+        app:srcCompat="@drawable/places" />
+
+    <EditText
+        android:id="@+id/etSubsidaryPhones"
+        android:layout_width="331dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter your other phone numbers one by one"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="89dp"
+        android:layout_height="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/etSubsidaryPhones"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etSubsidaryPhones"
+        app:layout_constraintTop_toTopOf="@+id/etSubsidaryPhones"
+        app:srcCompat="@drawable/r10" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="61dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@drawable/a" />
+
+    <Button
+        android:id="@+id/btnNext1"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="56dp"
+        android:background="#08595D"
+        android:text="NEXT"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
