@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoBG" />
+        app:srcCompat="@drawable/logo_bg" />
 
     <EditText
         android:id="@+id/etName"
@@ -45,6 +45,7 @@
         android:id="@+id/ivCld"
         android:layout_width="34dp"
         android:layout_height="35dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="@+id/etAge"
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="@+id/etAge"
