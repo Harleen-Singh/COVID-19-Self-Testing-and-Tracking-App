@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "244763029247",
+    "firebase_url": "https://covid-d828c.firebaseio.com",
+    "project_id": "covid-d828c",
+    "storage_bucket": "covid-d828c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244763029247:android:352eb59e7ba0ad950c66ca",
+        "android_client_info": {
+          "package_name": "com.gamecodeschool.covid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244763029247-r86tilq0flbnorerd82gsqsq2ompp872.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamecodeschool.covid",
+            "certificate_hash": "078940d65805b4a1f713f7f3072d64845ed38019"
+          }
+        },
+        {
+          "client_id": "244763029247-s6msuqsq4ni5vgq351oqst1h7i98k0lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbt8eaTX3e5uitT03LMq8mtSPnQZkg0XE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244763029247-s6msuqsq4ni5vgq351oqst1h7i98k0lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
