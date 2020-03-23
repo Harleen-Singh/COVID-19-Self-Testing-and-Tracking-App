@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">COVID</string>
+
+    <string-array name="sex">
+        <item>MALE</item>
+        <item>FEMALE</item>
+        <item>OTHERS</item>
+    </string-array>
+
 </resources>
