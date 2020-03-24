@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,8 +29,8 @@ public class homePage1 extends AppCompatActivity implements DatePickerDialog.OnD
     Button btnNext1;
     Spinner spGender;
 
-  //  public FirebaseAuth mAuth;
- //   public DatabaseReference databaseDrivers;
+
+     DatabaseReference databaseDrivers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +39,12 @@ public class homePage1 extends AppCompatActivity implements DatePickerDialog.OnD
         etName=findViewById(R.id.etName);
         etAge=findViewById(R.id.etAge);
         ivCld=findViewById(R.id.ivCld);
-        btnNext1=findViewById(R.id.btnNext1);
-        etAddress=findViewById(R.id.etAddress);
-        etSubsidaryPhones=findViewById(R.id.etSubsidaryPhones);
+       btnNext1=findViewById(R.id.btnNext1);
+       etAddress=findViewById(R.id.etAddress);
+       etSubsidaryPhones=findViewById(R.id.etSubsidaryPhones);
 
-//        databaseDrivers= FirebaseDatabase.getInstance().getReference("User_Info");
-    //    mAuth=FirebaseAuth.getInstance();
+       databaseDrivers= FirebaseDatabase.getInstance().getReference("User_Info");
+
 
         ivCld.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,39 +59,45 @@ public class homePage1 extends AppCompatActivity implements DatePickerDialog.OnD
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        btnNext1.setOnClickListener(new View.OnClickListener() {
+
+       btnNext1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Name,Dob,Gen,Address,SubPhn;
                 Name=etName.getText().toString().trim();
                 Dob=etAge.getText().toString().trim();
-                Gen=spGender.getSelectedItem().toString().trim();
+                Gen=spinner.getSelectedItem().toString().trim();
                 Address=etAddress.getText().toString().trim();
                 SubPhn=etSubsidaryPhones.getText().toString().trim();
 
                 if (Name.isEmpty()||Dob.isEmpty()||(SubPhn.length()<10)||Gen.isEmpty()||Address.isEmpty())
-                    Toast.makeText(getApplicationContext(),"All fields are mandatory",Toast.LENGTH_LONG).show();
-                else{
-                    btnNext1.setVisibility(View.VISIBLE);
-                   // addCredentials();
+                { Toast.makeText(getApplicationContext(),"All fields are mandatory",Toast.LENGTH_LONG).show();
+              //  btnNext1.setVisibility(View.INVISIBLE);
+                    }
+                else {
+                    //btnNext1.setVisibility(View.VISIBLE);
+                    addCredentials();
+                    Intent intent =new Intent(homePage1.this,homePage2.class);
+                    startActivity(intent);
                 }
             }
 
         });
-    }
- /*   public void addCredentials()
+
+}
+    public void addCredentials()
     {
 
-        String dvAdd,dvPhn,dvName,dvGen,dvDob = new String();
+        String dvAdd,dvPhn,dvName,dvDob,dvGen = new String();
         String dvid= databaseDrivers.push().getKey();
         dvAdd=etAddress.getText().toString().trim();
         dvPhn=etSubsidaryPhones.getText().toString().trim();
+        dvGen=spGender.getSelectedItem().toString().trim();
         dvName=etName.getText().toString().trim();
-       dvGen=spGender.getSelectedItem().toString().trim();
         dvDob=etAge.getText().toString().trim();
-        user_info dCredentials= new user_info(dvAdd,dvPhn,dvName,dvGen,dvDob);
+        user_info dCredentials= new user_info(dvAdd,dvPhn,dvName,dvDob,dvGen);
         databaseDrivers.child(dvid).setValue(dCredentials);
-    }*/
+    }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -106,7 +113,7 @@ public class homePage1 extends AppCompatActivity implements DatePickerDialog.OnD
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text1=parent.getItemAtPosition(position).toString();
-       // Toast.makeText(parent.getContext(),text1,Toast.LENGTH_SHORT).show();
+       Toast.makeText(parent.getContext(),text1,Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -3,7 +3,7 @@ package com.gamecodeschool.covid;
 public class user_info {
     String dName,dGen,dDob,dAdd,dPhn;
 
-    public user_info(String dName,String dGen, String dDob,String dAdd,String dPhn){
+    public user_info(String dvAdd, String dName, String dDob, String dAdd, String dPhn){
         this.dName = dName;
         this.dGen = dGen;
         this.dDob=dDob;
